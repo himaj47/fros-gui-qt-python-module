@@ -6,7 +6,7 @@ setup(
     author="himaj joshi",
     author_email="himajjoshi932@gmail.com",
     description="A Python package for ROS2 integration with FROS user interface",
-    url="https://github.com/yourusername/my_module",  # Add your repository URL
+    url="https://github.com/himaj47/fros-gui-qt-python-module",
     packages=find_packages(),
     include_package_data=True,
     install_requires=[

@@ -19,7 +19,7 @@ Install package locally
 ```sh
 pip install .
 ```
-To Uninstall this module, first make sure you're inside the project_directory i.e. 'my_module' 
+To uninstall the module
 
 ```sh
 pip uninstall my_module
