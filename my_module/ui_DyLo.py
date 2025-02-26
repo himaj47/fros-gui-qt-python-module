@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'fros_loaderYBPIwN.ui'
+## Form generated from reading UI file 'fros_loadervbiUbe.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.3
 ##
@@ -14,18 +14,13 @@ from PySide2.QtWidgets import *
 
 from Custom_Widgets.Widgets import QCustomStackedWidget
 
-import pkg_resources
-x_icon = pkg_resources.resource_filename('my_module', 'resources/icons/x.svg')
-square_icon = pkg_resources.resource_filename('my_module', 'resources/icons/square.svg')
-minus_icon = pkg_resources.resource_filename('my_module', 'resources/icons/minus.svg')
-
 # import resources_rc
 
 class Ui_DyLo(object):
     def setupUi(self, DyLo):
         if not DyLo.objectName():
             DyLo.setObjectName(u"DyLo")
-        DyLo.resize(1416, 763)
+        DyLo.resize(1416, 765)
         font = QFont()
         font.setPointSize(16)
         font.setBold(True)
@@ -96,7 +91,7 @@ class Ui_DyLo(object):
         self.minimize = QPushButton(self.frame_2)
         self.minimize.setObjectName(u"minimize")
         icon = QIcon()
-        icon.addFile(minus_icon, QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icons/icons/minus.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.minimize.setIcon(icon)
 
         self.horizontalLayout_11.addWidget(self.minimize, 0, Qt.AlignHCenter)
@@ -109,7 +104,7 @@ class Ui_DyLo(object):
         sizePolicy1.setHeightForWidth(self.maximize.sizePolicy().hasHeightForWidth())
         self.maximize.setSizePolicy(sizePolicy1)
         icon1 = QIcon()
-        icon1.addFile(square_icon, QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/icons/icons/square.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.maximize.setIcon(icon1)
 
         self.horizontalLayout_11.addWidget(self.maximize, 0, Qt.AlignHCenter)
@@ -117,7 +112,7 @@ class Ui_DyLo(object):
         self.close = QPushButton(self.frame_2)
         self.close.setObjectName(u"close")
         icon2 = QIcon()
-        icon2.addFile(x_icon, QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u":/icons/icons/x.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.close.setIcon(icon2)
 
         self.horizontalLayout_11.addWidget(self.close, 0, Qt.AlignHCenter)
@@ -504,7 +499,10 @@ class Ui_DyLo(object):
         self.widget_5.setObjectName(u"widget_5")
         sizePolicy3.setHeightForWidth(self.widget_5.sizePolicy().hasHeightForWidth())
         self.widget_5.setSizePolicy(sizePolicy3)
-        self.widget_5.setStyleSheet(u"")
+        self.widget_5.setStyleSheet(u".QWidget {\n"
+"	border: 1.5px solid rgb(192, 191, 188);\n"
+"	border-radius: 6px;\n"
+"}")
         self.horizontalLayout_14 = QHBoxLayout(self.widget_5)
         self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
         self.yaml_line_edit = QLineEdit(self.widget_5)
@@ -719,6 +717,15 @@ class Ui_DyLo(object):
 
         self.verticalLayout_6.addWidget(self.widget)
 
+        self.loading_layout = QHBoxLayout()
+        self.loading_layout.setObjectName(u"loading_layout")
+        self.loading_layout.setContentsMargins(-1, 0, -1, -1)
+        self.progressBar = QProgressBar(self.startPage)
+        self.progressBar.setObjectName(u"progressBar")
+        self.progressBar.setValue(24)
+
+        self.loading_layout.addWidget(self.progressBar)
+
         self.pushButton = QPushButton(self.startPage)
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setFont(font5)
@@ -737,7 +744,10 @@ class Ui_DyLo(object):
 "	background-color: rgb(180, 180, 180);\n"
 "}")
 
-        self.verticalLayout_6.addWidget(self.pushButton, 0, Qt.AlignRight)
+        self.loading_layout.addWidget(self.pushButton, 0, Qt.AlignRight)
+
+
+        self.verticalLayout_6.addLayout(self.loading_layout)
 
         self.customStackedWidget.addWidget(self.startPage)
         self.Simulation = QWidget()
