@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'fros_loadervbiUbe.ui'
+## Form generated from reading UI file 'fros_loaderqpxUtC.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.3
 ##
@@ -20,7 +20,7 @@ class Ui_DyLo(object):
     def setupUi(self, DyLo):
         if not DyLo.objectName():
             DyLo.setObjectName(u"DyLo")
-        DyLo.resize(1416, 765)
+        DyLo.resize(1416, 766)
         font = QFont()
         font.setPointSize(16)
         font.setBold(True)
@@ -485,9 +485,12 @@ class Ui_DyLo(object):
 
         self.param_frame = QFrame(self.widget)
         self.param_frame.setObjectName(u"param_frame")
-        sizePolicy6.setHeightForWidth(self.param_frame.sizePolicy().hasHeightForWidth())
-        self.param_frame.setSizePolicy(sizePolicy6)
-        self.param_frame.setMinimumSize(QSize(0, 625))
+        sizePolicy8 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Preferred)
+        sizePolicy8.setHorizontalStretch(0)
+        sizePolicy8.setVerticalStretch(0)
+        sizePolicy8.setHeightForWidth(self.param_frame.sizePolicy().hasHeightForWidth())
+        self.param_frame.setSizePolicy(sizePolicy8)
+        self.param_frame.setMinimumSize(QSize(375, 625))
         self.param_frame.setStyleSheet(u".QFrame {\n"
 "	border: 1.5px solid rgb(192, 191, 188);\n"
 "}")
@@ -542,8 +545,12 @@ class Ui_DyLo(object):
 
         self.param_widget = QWidget(self.param_frame)
         self.param_widget.setObjectName(u"param_widget")
-        sizePolicy2.setHeightForWidth(self.param_widget.sizePolicy().hasHeightForWidth())
-        self.param_widget.setSizePolicy(sizePolicy2)
+        sizePolicy9 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.MinimumExpanding)
+        sizePolicy9.setHorizontalStretch(0)
+        sizePolicy9.setVerticalStretch(0)
+        sizePolicy9.setHeightForWidth(self.param_widget.sizePolicy().hasHeightForWidth())
+        self.param_widget.setSizePolicy(sizePolicy9)
+        self.param_widget.setMinimumSize(QSize(375, 0))
         self.param_widget.setStyleSheet(u"background-color: white;")
         self.verticalLayout_10 = QVBoxLayout(self.param_widget)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
