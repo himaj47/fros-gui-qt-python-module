@@ -1,14 +1,7 @@
-import os
 import json
-
-# cwd = os.path.expanduser("~")
 
 import pkg_resources
 
-# style_path = cwd + "/my_module/my_module/resources/style.json"
-
-# icons = cwd + "/my_module/my_module/resources/icons/"
-# square_icon = icons + "square.svg"
 square_icon = pkg_resources.resource_filename('my_module', 'resources/icons/square.svg')
 style_path = pkg_resources.resource_filename('my_module', 'resources/style.json')
 

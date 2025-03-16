@@ -13,6 +13,7 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 from Custom_Widgets.Widgets import QCustomStackedWidget
+import pkg_resources
 
 # import resources_rc
 
@@ -91,7 +92,7 @@ class Ui_DyLo(object):
         self.minimize = QPushButton(self.frame_2)
         self.minimize.setObjectName(u"minimize")
         icon = QIcon()
-        icon.addFile(u":/icons/icons/minus.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(pkg_resources.resource_filename('my_module', 'resources/icons/minus.svg'), QSize(), QIcon.Normal, QIcon.Off)
         self.minimize.setIcon(icon)
 
         self.horizontalLayout_11.addWidget(self.minimize, 0, Qt.AlignHCenter)
@@ -104,7 +105,7 @@ class Ui_DyLo(object):
         sizePolicy1.setHeightForWidth(self.maximize.sizePolicy().hasHeightForWidth())
         self.maximize.setSizePolicy(sizePolicy1)
         icon1 = QIcon()
-        icon1.addFile(u":/icons/icons/square.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(pkg_resources.resource_filename('my_module', 'resources/icons/square.svg'), QSize(), QIcon.Normal, QIcon.Off)
         self.maximize.setIcon(icon1)
 
         self.horizontalLayout_11.addWidget(self.maximize, 0, Qt.AlignHCenter)
@@ -112,7 +113,7 @@ class Ui_DyLo(object):
         self.close = QPushButton(self.frame_2)
         self.close.setObjectName(u"close")
         icon2 = QIcon()
-        icon2.addFile(u":/icons/icons/x.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(pkg_resources.resource_filename('my_module', 'resources/icons/x.svg'), QSize(), QIcon.Normal, QIcon.Off)
         self.close.setIcon(icon2)
 
         self.horizontalLayout_11.addWidget(self.close, 0, Qt.AlignHCenter)
